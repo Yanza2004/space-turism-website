@@ -1,0 +1,27 @@
+.nav-element {
+  position: relative;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  gap: 0.7rem;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.nav-element::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 1.5rem;
+  height: 4px;
+  width: 100%;
+  background-color: #fff; /* verde */
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.nav-element.active::after {
+  transform: scaleX(1);
+}

@@ -1,0 +1,62 @@
+.mainContainer {
+  min-height: calc(100vh - 10rem);
+  padding-top: 10rem; /* ✅ Altura del navbar aprox. */
+  width: 100%;
+  background-image: url("../assets/crew/background-crew-desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.section {
+  margin-left: 10rem;
+}
+
+.navElement {
+  position: relative;
+  display: flex;
+  background-color: gray;
+  cursor: pointer;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 20rem;
+}
+
+.navElement.active {
+  transition-duration: 300ms;
+  background-color: white;
+}
+
+.nav {
+  display: flex;
+  gap: 2rem;
+}
+.textContent {
+  display: flex;
+  flex-direction: column;
+  min-height: 80%;
+  margin-top: 10rem;
+  gap: 4rem;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+  height: 50rem;
+  padding: 0 10rem 0 10rem;
+}
+
+.role {
+  font-size: 2.6rem;
+  color: gray;
+}
+.name {
+  font-size: 4rem;
+}
+
+.bio {
+  font-size: 1.2rem;
+  width: 40rem;
+}

@@ -1,0 +1,74 @@
+.nav-bar {
+  position: fixed;
+  top: 0.2;
+  left: 8rem;
+  z-index: 1000;
+  display: grid;
+  grid-template-columns: 0.4fr 2fr;
+  font-size: 1.2rem;
+  width: 100%;
+  margin: auto;
+  align-items: center;
+  padding: 2rem;
+  text-transform: uppercase;
+}
+
+.element-navbar {
+  text-decoration: dashed;
+  color: white;
+}
+
+.nav-elements-container {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
+  background: rgba(255, 255, 255, 0.05); /* transparencia */
+  backdrop-filter: blur(10px); /* efecto de desenfoque */
+  -webkit-backdrop-filter: blur(10px); /* soporte para Safari */
+  border-radius: 10px;
+  padding: 1rem 2rem;
+  padding: 1rem;
+  margin-left: 20rem;
+  width: 60rem;
+  height: 3.5rem;
+}
+
+.bar-betwen {
+  position: absolute;
+  left: -30rem;
+  width: 35rem;
+  height: 0.1rem;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.icon {
+  font-weight: bold;
+}
+
+.nav-element {
+  position: relative;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  gap: 0.7rem;
+}
+
+.nav-element::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 3.4rem;
+  height: 4px;
+  width: 100%;
+  background-color: #fff; /* verde */
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.nav-element.active::after {
+  transform: scaleX(1);
+}
